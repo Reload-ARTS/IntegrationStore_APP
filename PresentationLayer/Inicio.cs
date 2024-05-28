@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BusinessLayer;//Importar capa negocios
 using EntityLayer;//Importar capa entidad
 using FontAwesome.Sharp;
 
@@ -26,6 +27,20 @@ namespace PresentationLayer
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            //Enseña los permisos del usuario
+            List<Permiso> ListarPermisos = new BL_Permiso().Listar(usuarioActual.IdUsuario);
+            //Restringuir la vista de los menus segun permiso
+            foreach (IconMenuItem iconmenu in menu.Items)
+            {
+                bool encontrado = ListarPermisos.Any(m => m.NombreMenu == iconmenu.Name);
+                if (encontrado == false)
+                {
+                    iconmenu.Visible = false;
+                }
+            }
+
+
+
             //Mostrar el usuario actual 
             lblusuario.Text = usuarioActual.NombreCompleto;
         }
