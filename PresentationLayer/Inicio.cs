@@ -19,9 +19,13 @@ namespace PresentationLayer
         private static Usuario usuarioActual;
         private static IconMenuItem MenuActivo = null;
         private static Form FormularioActivo = null;
-        public Inicio(Usuario objusuario)
+        public Inicio(Usuario objusuario = null)
         {
-            usuarioActual = objusuario;
+            if(objusuario == null)
+                usuarioActual = new Usuario() { NombreCompleto = "ADMIN DEFAULT", IdUsuario = 1 };
+            else
+                usuarioActual = objusuario;
+
             InitializeComponent();
         }
 
@@ -118,5 +122,6 @@ namespace PresentationLayer
         {
             AbrirFormulario((IconMenuItem)sender, new frmReportes());
         }
+
     }
 }
