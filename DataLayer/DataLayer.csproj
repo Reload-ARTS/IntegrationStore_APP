@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DL_Rol.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DL_Permiso.cs" />
     <Compile Include="DL_Usuario.cs" />
