@@ -152,6 +152,7 @@ namespace DataLayer
 
 
 
+
         //Procedimiento almacenado para eliminar usuario
         public bool Eliminar(Usuario obj, out string Mensaje)
         {
