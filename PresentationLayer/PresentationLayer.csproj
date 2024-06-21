@@ -193,12 +193,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngegg %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngegg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pngegg %283%29.png" />
   </ItemGroup>
   <ItemGroup>

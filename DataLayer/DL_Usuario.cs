@@ -124,7 +124,7 @@ namespace DataLayer
 
                     //Declarar Parametros de salida
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Menasje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
 
 
@@ -135,7 +135,7 @@ namespace DataLayer
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
-                    Mensaje = cmd.Parameters["Menasje"].Value.ToString();
+                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
 
                 }
 
@@ -168,8 +168,8 @@ namespace DataLayer
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
 
                     //Declarar Parametros de salida
-                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Menasje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Respuesta", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
 
 
@@ -180,7 +180,7 @@ namespace DataLayer
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
-                    Mensaje = cmd.Parameters["Menasje"].Value.ToString();
+                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
 
                 }
 
