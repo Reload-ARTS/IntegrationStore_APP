@@ -274,5 +274,11 @@ namespace PresentationLayer
                 row.Visible = true;
             }
         }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            //Llama al metodo Limpiar al agregar una categoria
+            Limpiar();
+        }
     }
 }
