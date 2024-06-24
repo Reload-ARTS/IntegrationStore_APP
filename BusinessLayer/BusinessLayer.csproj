@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BL_Categoria.cs" />
     <Compile Include="BL_Permiso.cs" />
+    <Compile Include="BL_Producto.cs" />
     <Compile Include="BL_Rol.cs" />
     <Compile Include="BL_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
