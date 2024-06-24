@@ -45,6 +45,7 @@
     <Compile Include="DL_Categoria.cs" />
     <Compile Include="DL_Cliente.cs" />
     <Compile Include="DL_Producto.cs" />
+    <Compile Include="DL_Proveedor.cs" />
     <Compile Include="DL_Rol.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DL_Permiso.cs" />
