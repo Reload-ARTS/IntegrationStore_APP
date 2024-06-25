@@ -43,7 +43,7 @@ namespace PresentationLayer
             cbobusqueda.SelectedIndex = 0;
 
 
-            //Mostrar todos los usuarios 
+            //Mostrar todos los proveedores
             List<Proveedor> lista = new BL_Proveedor().Listar();
             foreach (Proveedor item in lista)
             {
