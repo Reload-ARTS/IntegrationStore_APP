@@ -14,6 +14,7 @@ namespace PresentationLayer
         [STAThread]
         static void Main()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-CL");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Donde empieza la APP generalmente el Login
