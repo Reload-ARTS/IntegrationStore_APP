@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.btnbuscar = new FontAwesome.Sharp.IconButton();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnexportarpdf = new FontAwesome.Sharp.IconButton();
+            this.btndescargarpdf = new FontAwesome.Sharp.IconButton();
             this.txtnumerodocumento = new System.Windows.Forms.TextBox();
-            this.txtnombreproveedor = new System.Windows.Forms.TextBox();
-            this.txtdocproveedor = new System.Windows.Forms.TextBox();
+            this.txtnombrecliente = new System.Windows.Forms.TextBox();
+            this.txtdoccliente = new System.Windows.Forms.TextBox();
             this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmontototal = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,10 +57,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmontocambio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -96,6 +96,7 @@
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnlimpiar.UseVisualStyleBackColor = false;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // btnbuscar
             // 
@@ -116,6 +117,7 @@
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click_1);
             // 
             // txtbusqueda
             // 
@@ -135,25 +137,26 @@
             this.label13.TabIndex = 73;
             this.label13.Text = "Nro Documento :";
             // 
-            // btnexportarpdf
+            // btndescargarpdf
             // 
-            this.btnexportarpdf.BackColor = System.Drawing.Color.White;
-            this.btnexportarpdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnexportarpdf.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnexportarpdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexportarpdf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexportarpdf.ForeColor = System.Drawing.Color.Black;
-            this.btnexportarpdf.IconChar = FontAwesome.Sharp.IconChar.Database;
-            this.btnexportarpdf.IconColor = System.Drawing.Color.Black;
-            this.btnexportarpdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnexportarpdf.IconSize = 22;
-            this.btnexportarpdf.Location = new System.Drawing.Point(803, 507);
-            this.btnexportarpdf.Name = "btnexportarpdf";
-            this.btnexportarpdf.Size = new System.Drawing.Size(184, 27);
-            this.btnexportarpdf.TabIndex = 72;
-            this.btnexportarpdf.Text = "Descargar en PDF";
-            this.btnexportarpdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnexportarpdf.UseVisualStyleBackColor = false;
+            this.btndescargarpdf.BackColor = System.Drawing.Color.White;
+            this.btndescargarpdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btndescargarpdf.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btndescargarpdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndescargarpdf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndescargarpdf.ForeColor = System.Drawing.Color.Black;
+            this.btndescargarpdf.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.btndescargarpdf.IconColor = System.Drawing.Color.Black;
+            this.btndescargarpdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btndescargarpdf.IconSize = 22;
+            this.btndescargarpdf.Location = new System.Drawing.Point(803, 507);
+            this.btndescargarpdf.Name = "btndescargarpdf";
+            this.btndescargarpdf.Size = new System.Drawing.Size(184, 27);
+            this.btndescargarpdf.TabIndex = 72;
+            this.btndescargarpdf.Text = "Descargar en PDF";
+            this.btndescargarpdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btndescargarpdf.UseVisualStyleBackColor = false;
+            this.btndescargarpdf.Click += new System.EventHandler(this.btndescargarpdf_Click);
             // 
             // txtnumerodocumento
             // 
@@ -162,33 +165,33 @@
             this.txtnumerodocumento.Size = new System.Drawing.Size(65, 25);
             this.txtnumerodocumento.TabIndex = 33;
             // 
-            // txtnombreproveedor
+            // txtnombrecliente
             // 
-            this.txtnombreproveedor.Location = new System.Drawing.Point(253, 43);
-            this.txtnombreproveedor.Name = "txtnombreproveedor";
-            this.txtnombreproveedor.Size = new System.Drawing.Size(260, 25);
-            this.txtnombreproveedor.TabIndex = 3;
+            this.txtnombrecliente.Location = new System.Drawing.Point(253, 43);
+            this.txtnombrecliente.Name = "txtnombrecliente";
+            this.txtnombrecliente.Size = new System.Drawing.Size(260, 25);
+            this.txtnombrecliente.TabIndex = 3;
             // 
-            // txtdocproveedor
+            // txtdoccliente
             // 
-            this.txtdocproveedor.Location = new System.Drawing.Point(9, 43);
-            this.txtdocproveedor.Name = "txtdocproveedor";
-            this.txtdocproveedor.Size = new System.Drawing.Size(219, 25);
-            this.txtdocproveedor.TabIndex = 2;
+            this.txtdoccliente.Location = new System.Drawing.Point(9, 43);
+            this.txtdoccliente.Name = "txtdoccliente";
+            this.txtdoccliente.Size = new System.Drawing.Size(219, 25);
+            this.txtdoccliente.TabIndex = 2;
             // 
             // dgvdata
             // 
             this.dgvdata.AllowUserToAddRows = false;
             this.dgvdata.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
@@ -199,12 +202,38 @@
             this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
             this.dgvdata.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.Size = new System.Drawing.Size(839, 235);
             this.dgvdata.TabIndex = 71;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 150;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 180;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
             // 
             // label5
             // 
@@ -228,8 +257,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.txtnumerodocumento);
-            this.groupBox1.Controls.Add(this.txtnombreproveedor);
-            this.groupBox1.Controls.Add(this.txtdocproveedor);
+            this.groupBox1.Controls.Add(this.txtnombrecliente);
+            this.groupBox1.Controls.Add(this.txtdoccliente);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,32 +369,6 @@
             this.label10.TabIndex = 67;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 150;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 180;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Sub Total";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -418,7 +421,7 @@
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtbusqueda);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnexportarpdf);
+            this.Controls.Add(this.btndescargarpdf);
             this.Controls.Add(this.dgvdata);
             this.Controls.Add(this.txtmontototal);
             this.Controls.Add(this.groupBox1);
@@ -427,6 +430,7 @@
             this.Controls.Add(this.label10);
             this.Name = "frmDetalleVenta";
             this.Text = "frmDetalleVenta";
+            this.Load += new System.EventHandler(this.frmDetalleVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -444,10 +448,10 @@
         private FontAwesome.Sharp.IconButton btnbuscar;
         private System.Windows.Forms.TextBox txtbusqueda;
         private System.Windows.Forms.Label label13;
-        private FontAwesome.Sharp.IconButton btnexportarpdf;
+        private FontAwesome.Sharp.IconButton btndescargarpdf;
         private System.Windows.Forms.TextBox txtnumerodocumento;
-        private System.Windows.Forms.TextBox txtnombreproveedor;
-        private System.Windows.Forms.TextBox txtdocproveedor;
+        private System.Windows.Forms.TextBox txtnombrecliente;
+        private System.Windows.Forms.TextBox txtdoccliente;
         private System.Windows.Forms.DataGridView dgvdata;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtmontototal;
