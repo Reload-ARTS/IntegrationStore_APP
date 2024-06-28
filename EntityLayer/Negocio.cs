@@ -12,5 +12,7 @@ namespace EntityLayer
         public string Nombre { get; set; }
         public string Rut {  get; set; }
         public string Direccion { get; set; }
+
+        
     }
 }

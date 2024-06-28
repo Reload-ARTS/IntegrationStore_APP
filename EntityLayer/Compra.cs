@@ -8,6 +8,8 @@ namespace EntityLayer
 {
     public class Compra
     {
+        public List<Detalle_Compra> oDetalleCompra;
+
         //Datos de nuestra tabla en BDD
         public int IdCompra { get; set; }
         public Usuario oUsuario { get; set; }
