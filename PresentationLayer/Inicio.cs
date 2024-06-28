@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BusinessLayer;//Importar capa negocios
 using EntityLayer;//Importar capa entidad
 using FontAwesome.Sharp;
+using PresentationLayer.Modales;
 
 namespace PresentationLayer
 {
@@ -131,6 +132,12 @@ namespace PresentationLayer
         private void submenureporteventas_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menureportes, new frmReporteVentas());
+        }
+
+        private void menuacercade_Click(object sender, EventArgs e)
+        {
+            MD_Acercade md = new MD_Acercade();
+            md.ShowDialog();
         }
     }
 }
