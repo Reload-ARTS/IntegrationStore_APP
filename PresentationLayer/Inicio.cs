@@ -118,14 +118,19 @@ namespace PresentationLayer
             AbrirFormulario((IconMenuItem)sender, new frmProveedores());
         }
 
-        private void menureportes_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario((IconMenuItem)sender, new frmReportes());
-        }
-
         private void submenunegocio_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menumantenedor, new frmNegocio());
+        }
+
+        private void submenureportecompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menureportes, new frmReporteCompras());
+        }
+
+        private void submenureporteventas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menureportes, new frmReporteVentas());
         }
     }
 }
