@@ -139,5 +139,13 @@ namespace PresentationLayer
             MD_Acercade md = new MD_Acercade();
             md.ShowDialog();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

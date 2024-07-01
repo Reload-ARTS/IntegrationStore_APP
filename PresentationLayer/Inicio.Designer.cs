@@ -51,6 +51,7 @@
             this.contenedor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblusuario = new System.Windows.Forms.Label();
+            this.btnsalir = new FontAwesome.Sharp.IconButton();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -329,11 +330,26 @@
             this.lblusuario.TabIndex = 5;
             this.lblusuario.Text = "lblusuario";
             // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnsalir.IconColor = System.Drawing.Color.White;
+            this.btnsalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnsalir.Location = new System.Drawing.Point(1102, 12);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(65, 49);
+            this.btnsalir.TabIndex = 6;
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 721);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contenedor);
@@ -377,6 +393,7 @@
         private System.Windows.Forms.ToolStripMenuItem submenunegocio;
         private System.Windows.Forms.ToolStripMenuItem submenureportecompras;
         private System.Windows.Forms.ToolStripMenuItem submenureporteventas;
+        private FontAwesome.Sharp.IconButton btnsalir;
     }
 }
 

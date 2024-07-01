@@ -37,13 +37,14 @@ namespace PresentationLayer
                     txtdocproveedor.Text = oCompra.oProveedor.Documento;
                     txtnombreproveedor.Text = oCompra.oProveedor.RazonSocial;
 
-
                     dgvdata.Rows.Clear();
-                    foreach(Detalle_Compra dc in oCompra.oDetalleCompra)
+                    foreach (Detalle_Compra dc in oCompra.oDetalleCompra)
                     {
                         dgvdata.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioCompra, dc.Cantidad, dc.MontoTotal });
                     }
-                    txtmontototal.Text =oCompra.MontoTotal.ToString("0.00");
+
+                    txtmontototal.Text = oCompra.MontoTotal.ToString("0.00");
+
 
                 }
             }
@@ -138,7 +139,9 @@ namespace PresentationLayer
 
         }
 
+        private void frmDetalleCompra_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

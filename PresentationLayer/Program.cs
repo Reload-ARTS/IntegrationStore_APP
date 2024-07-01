@@ -18,7 +18,7 @@ namespace PresentationLayer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Donde empieza la APP generalmente el Login
-            Application.Run(new Inicio());
+            Application.Run(new Login());
         }
     }
 }

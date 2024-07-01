@@ -604,6 +604,7 @@
             this.txtidproductoventa.Name = "txtidproductoventa";
             this.txtidproductoventa.Size = new System.Drawing.Size(34, 25);
             this.txtidproductoventa.TabIndex = 29;
+            this.txtidproductoventa.Visible = false;
             // 
             // btnbuscarproducto_rv
             // 
