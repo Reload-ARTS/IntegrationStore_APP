@@ -8,7 +8,9 @@ Sistema de gestión de inventario, compras y ventas desarrollado en **C#**, **Wi
 
 Integration Store fue desarrollado como proyecto académico para la carrera de Analista Programador durante el año 2024.
 
-La aplicación permite gestionar el ciclo completo de operación de una tienda informática, incluyendo control de inventario, registro de compras, registro de ventas, administración de clientes y proveedores, generación de reportes y exportación de información.
+La aplicación permite administrar productos, categorías, clientes, proveedores y transacciones comerciales desde una única plataforma.
+
+Aunque las capturas de ejemplo utilizan una tienda informática, el sistema puede adaptarse fácilmente a distintos tipos de negocios mediante la configuración del negocio y la gestión personalizada de productos, categorías y proveedores.
 
 ---
 
@@ -121,7 +123,9 @@ El script incluye la estructura principal de tablas, relaciones y datos necesari
 ## Capturas del Sistema
 
 ### Login
-
+---
+Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
+---
 ![Login](docs/screenshots/01%20-%20login.png)
 
 ### Menú Principal
