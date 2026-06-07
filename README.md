@@ -135,6 +135,19 @@ Interfaz principal desde donde se accede a todos los módulos del sistema. El me
 Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
 ![Usuarios](docs/screenshots/03%20-%20usuarios.png)
 
+### Control de Acceso por Roles
+El sistema implementa control de acceso basado en roles para restringir funcionalidades según el perfil del usuario autenticado.
+
+#### Administrador
+
+Acceso completo a la administración de usuarios, categorías, productos, compras, ventas, clientes, proveedores, reportes y configuración del negocio.
+
+#### Empleado
+
+Acceso limitado a funciones operativas como ventas, clientes, proveedores y reportes, manteniendo protegidos los módulos administrativos.
+
+![Empleado](docs/screenshots/21-empleado-menu.png)
+
 ### Gestión de Categorías
 Permite administrar las categorías utilizadas para clasificar los productos del inventario, facilitando su organización y búsqueda.
 ![Categorias](docs/screenshots/04%20-%20categoria.png)
