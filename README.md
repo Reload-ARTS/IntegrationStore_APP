@@ -124,7 +124,7 @@ El script incluye la estructura principal de tablas, relaciones y datos necesari
 
 ### Login
 ---
-Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
+## Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
 ---
 ![Login](docs/screenshots/01%20-%20login.png)
 
