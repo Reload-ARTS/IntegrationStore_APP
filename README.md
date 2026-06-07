@@ -120,28 +120,27 @@ El script incluye la estructura principal de tablas, relaciones y datos necesari
 
 ---
 
-## Capturas del Sistema
+## Módulos del Sistema
 
 ### Login
----
-## Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
----
+
+Permite el acceso al sistema mediante autenticación de usuarios registrados. El acceso se encuentra controlado por roles, permitiendo restringir funcionalidades según el perfil asignado.
 ![Login](docs/screenshots/01%20-%20login.png)
 
 ### Menú Principal
-
+Interfaz principal desde donde se accede a todos los módulos del sistema. El menú lateral permite navegar entre las distintas funcionalidades de administración, compras, ventas y reportes.
 ![Interfaz](docs/screenshots/02%20-%20interfaz.png)
 
 ### Gestión de Usuarios
-
+Permite crear, modificar, activar, desactivar y administrar usuarios del sistema, además de asignar roles y controlar los permisos de acceso.
 ![Usuarios](docs/screenshots/03%20-%20usuarios.png)
 
 ### Gestión de Categorías
-
+Permite administrar las categorías utilizadas para clasificar los productos del inventario, facilitando su organización y búsqueda.
 ![Categorias](docs/screenshots/04%20-%20categoria.png)
 
 ### Gestión de Productos
-
+Permite registrar productos, controlar stock, definir precios de compra y venta, asignar categorías y administrar la información comercial de cada artículo.
 ![Productos](docs/screenshots/05%20-%20productos.png)
 
 ### Exportación Excel de Productos
@@ -149,59 +148,63 @@ El script incluye la estructura principal de tablas, relaciones y datos necesari
 ![Excel Productos](docs/screenshots/06%20-%20excel_productos.png)
 
 ### Configuración del Negocio
+Permite personalizar la información de la empresa, incluyendo nombre comercial, razón social, RUT, dirección y logotipo.
 
+Gracias a esta funcionalidad, el sistema puede adaptarse fácilmente a distintos tipos de negocios, como tiendas de informática, minimarkets, ferreterías, librerías, restaurantes o comercios de barrio.
 ![Negocio](docs/screenshots/07%20-%20negocio.png)
 
 ### Registro de Ventas
-
+Permite registrar ventas, seleccionar clientes, generar comprobantes y actualizar automáticamente el stock de los productos vendidos.
 ![Venta](docs/screenshots/08%20-%20registrar_venta.png)
 
 ### Detalle de Venta
-
+Visualización detallada de los productos vendidos, cantidades, precios y totales asociados a cada transacción.
 ![Detalle Venta](docs/screenshots/09%20-%20detalle_venta.png)
 
 ### PDF de Venta
-
+El sistema genera automáticamente comprobantes de venta en formato PDF para impresión o almacenamiento digital.
 ![PDF Venta](docs/screenshots/10%20-%20pdf_detalle_venta.png)
 
 ### Registro de Compras
-
+Permite registrar compras realizadas a proveedores, actualizar inventario y mantener trazabilidad de las adquisiciones realizadas por la empresa.
 ![Compra](docs/screenshots/11%20-%20registro_compra.png)
 
 ### Detalle de Compra
-
+Visualización detallada de los productos adquiridos, cantidades y costos asociados a cada compra.
 ![Detalle Compra](docs/screenshots/12%20-%20detalle_compra.png)
 
 ### PDF de Compra
-
+El sistema permite generar documentos PDF con el detalle completo de las compras registradas.
 ![PDF Compra](docs/screenshots/13%20-%20pdf_detalle_compra.png)
 
 ### Clientes
-
+Permite registrar, modificar y administrar la información de clientes utilizados durante el proceso de ventas.
 ![Clientes](docs/screenshots/14%20-%20clientes.png)
 
 ### Proveedores
+Permite administrar proveedores y mantener un registro centralizado de las empresas o personas que abastecen productos al negocio.
 
+El sistema protege la integridad de los datos impidiendo eliminar proveedores asociados a compras históricas.
 ![Proveedores](docs/screenshots/15%20-%20proveedores.png)
 
 ### Reporte de Compras
-
+Permite consultar compras realizadas mediante filtros por rango de fechas y generar información útil para la gestión administrativa.
 ![Reporte Compras](docs/screenshots/16%20-%20reporte_compra.png)
 
 ### Exportación Excel de Compras
-
+La información obtenida en los reportes puede exportarse a Excel para análisis o respaldo.
 ![Excel Compras](docs/screenshots/17%20-%20excel_compra.png)
 
 ### Reporte de Ventas
-
+Permite analizar las ventas realizadas mediante filtros por período, facilitando el seguimiento comercial del negocio.
 ![Reporte Ventas](docs/screenshots/18%20-%20reporte_ventas.png)
 
 ### Exportación Excel de Ventas
-
+Los resultados pueden exportarse a Excel para su posterior análisis o integración con otras herramientas.
 ![Excel Ventas](docs/screenshots/19%20-%20excel_venta.png)
 
 ### Acerca del Proyecto
-
+Pantalla informativa que resume las funcionalidades principales, tecnologías utilizadas y propósito general de la aplicación.
 ![Acerca De](docs/screenshots/20%20-%20acerca_de.png)
 
 ---
