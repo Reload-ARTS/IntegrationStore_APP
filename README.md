@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # IntegrationStore_APP
 
 IntegrationStore_APP es una aplicación de escritorio diseñada para la gestión de compra, venta y control de inventario de manera eficiente.
@@ -339,7 +338,4 @@ Proyecto finalizado y conservado como parte del portafolio personal para demostr
 
 ## Autor
 
-Antonio Toro Sagredo
-
-Analista Programador
->>>>>>> portfolio-update
+Antonio Toro Sagredo | Analista Programador.
