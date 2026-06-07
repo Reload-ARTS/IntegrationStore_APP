@@ -28,7 +28,6 @@ namespace PresentationLayer
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> Test = new BL_Usuario().Listar();
 
             //Obtenemos el usuario de quien se logea
             Usuario ousuario = new BL_Usuario().Listar().Where(u => u.Documento == txtdocumento.Text && u.Clave == txtclave.Text).FirstOrDefault();
@@ -64,5 +63,6 @@ namespace PresentationLayer
 
             this.Show();
         }
+
     }
 }

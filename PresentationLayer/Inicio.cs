@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BusinessLayer;//Importar capa negocios
 using EntityLayer;//Importar capa entidad
 using FontAwesome.Sharp;
+using PresentationLayer.Modales;
 
 namespace PresentationLayer
 {
@@ -90,7 +91,7 @@ namespace PresentationLayer
 
         private void submenuregistrarventa_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuventas, new frmVentas());
+            AbrirFormulario(menuventas, new frmVentas(usuarioActual));
         }
 
         private void submenuverdetalledeventa_Click(object sender, EventArgs e)
@@ -100,7 +101,7 @@ namespace PresentationLayer
 
         private void submenuregistrarcompra_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menucompras, new frmCompras());
+            AbrirFormulario(menucompras, new frmCompras(usuarioActual));
         }
 
         private void submenuverdetallecompra_Click(object sender, EventArgs e)
@@ -118,10 +119,33 @@ namespace PresentationLayer
             AbrirFormulario((IconMenuItem)sender, new frmProveedores());
         }
 
-        private void menureportes_Click(object sender, EventArgs e)
+        private void submenunegocio_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new frmReportes());
+            AbrirFormulario(menumantenedor, new frmNegocio());
         }
 
+        private void submenureportecompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menureportes, new frmReporteCompras());
+        }
+
+        private void submenureporteventas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menureportes, new frmReporteVentas());
+        }
+
+        private void menuacercade_Click(object sender, EventArgs e)
+        {
+            MD_Acercade md = new MD_Acercade();
+            md.ShowDialog();
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

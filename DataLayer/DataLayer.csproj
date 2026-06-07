@@ -42,10 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DL_Categoria.cs" />
+    <Compile Include="DL_Cliente.cs" />
+    <Compile Include="DL_Compra.cs" />
+    <Compile Include="DL_Negocio.cs" />
+    <Compile Include="DL_Producto.cs" />
+    <Compile Include="DL_Proveedor.cs" />
+    <Compile Include="DL_Reporte.cs" />
     <Compile Include="DL_Rol.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DL_Permiso.cs" />
     <Compile Include="DL_Usuario.cs" />
+    <Compile Include="DL_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
