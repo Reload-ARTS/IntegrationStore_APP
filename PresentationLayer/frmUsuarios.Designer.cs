@@ -227,6 +227,7 @@
             // dgvdata
             // 
             this.dgvdata.AllowUserToAddRows = false;
+            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvdata.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -267,7 +268,6 @@
             this.btnseleccionar.HeaderText = "";
             this.btnseleccionar.Name = "btnseleccionar";
             this.btnseleccionar.ReadOnly = true;
-            this.btnseleccionar.Width = 30;
             // 
             // Id
             // 
@@ -281,21 +281,18 @@
             this.Documento.HeaderText = "Nro Documento";
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
-            this.Documento.Width = 150;
             // 
             // NombreCompleto
             // 
             this.NombreCompleto.HeaderText = "Nombre Completo";
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 180;
             // 
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
-            this.Correo.Width = 150;
             // 
             // Clave
             // 
