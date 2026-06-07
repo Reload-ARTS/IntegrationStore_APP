@@ -226,16 +226,40 @@ Pantalla informativa que resume las funcionalidades principales, tecnologías ut
 
 ### Requisitos
 
-* Windows
+* Windows 10/11
 * SQL Server
-* Visual Studio
+* Visual Studio 2022 o superior
+* .NET Framework 4.7.2
 
 ### Pasos
 
-1. Restaurar la base de datos utilizando el script `DBSystemApp.sql`.
-2. Configurar la cadena de conexión en `App.config`.
-3. Abrir la solución `IntegrationStore_APP.sln`.
-4. Compilar y ejecutar el proyecto.
+1. Ejecutar el script `DBSystemApp.sql` para crear la base de datos.
+2. Verificar el nombre de la instancia de SQL Server (por ejemplo: `SQLEXPRESS`, `ServerName`, etc.).
+3. Configurar la cadena de conexión en `App.config`:
+
+```xml
+<add name="cadena_conexion"
+     connectionString="Data Source=ServerName;Initial Catalog=DBSystemApp;Integrated Security=True"
+     providerName="System.Data.SqlClient" />
+```
+
+4. Abrir la solución `IntegrationStore_APP.sln`.
+5. Restaurar paquetes NuGet si Visual Studio lo solicita.
+6. Compilar y ejecutar el proyecto.
+
+### Instalador
+
+También se incluye una versión instalable generada con Inno Setup.
+
+**Importante:** si la aplicación se instala en otro equipo, puede ser necesario actualizar la cadena de conexión en:
+
+```
+
+IntegrationStore.exe.config
+
+```
+
+para que coincida con la instancia de SQL Server disponible en el equipo destino.
 
 ---
 
